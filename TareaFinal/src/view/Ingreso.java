@@ -10,7 +10,7 @@ import filemanager.WriterManagerbin;
 import java.io.IOException;
 import javax.swing.JOptionPane;
 import static main.TareaFinal.listManager;
-import model.User;
+import user.User;
 
 /**
  *

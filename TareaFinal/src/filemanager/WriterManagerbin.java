@@ -14,7 +14,7 @@ public class WriterManagerbin {
     }
 
     public void write() throws IOException {
-   //     writer.writeObject(TareaFinal.listManager);
+        writer.writeObject(TareaFinal.listManager);
     }
 
     public void close() throws IOException {

@@ -1,5 +1,5 @@
 
-package model;
+package user;
 
 import java.io.Serializable;
 

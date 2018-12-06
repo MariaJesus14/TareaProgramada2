@@ -1,6 +1,6 @@
 package filemanager;
 
-import dataset.UsersList;
+import user.UsersList;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;

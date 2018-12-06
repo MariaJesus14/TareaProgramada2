@@ -1,8 +1,8 @@
 
-package dataset;
+package user;
 
 import java.io.Serializable;
-import model.User;
+import user.User;
 
 /**
  *

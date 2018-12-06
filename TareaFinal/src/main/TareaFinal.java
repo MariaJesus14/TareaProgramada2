@@ -5,7 +5,7 @@
  */
 package main;
 
-import dataset.UsersList;
+import user.UsersList;
 import view.Start;
 
 /**
