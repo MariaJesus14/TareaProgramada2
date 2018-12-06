@@ -6,6 +6,7 @@
 package main;
 
 import dataset.UsersList;
+import view.Start;
 
 /**
  *
@@ -18,7 +19,8 @@ public class TareaFinal {
      */
     public static UsersList listManager = new UsersList ();
     public static void main(String[] args) {
-         
+         Start star = new Start ();
+         star.setVisible(true);
     }
     
 }
