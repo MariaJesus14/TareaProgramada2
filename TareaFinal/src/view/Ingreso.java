@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package View;
+package view;
 
-import fileManager.ReaderManagerbin;
-import fileManager.WriterManagerbin;
+import filemanager.ReaderManagerbin;
+import filemanager.WriterManagerbin;
 import java.io.IOException;
 import javax.swing.JOptionPane;
-import static main.Main.listManager;
+import static main.TareaFinal.listManager;
 import model.User;
 
 /**

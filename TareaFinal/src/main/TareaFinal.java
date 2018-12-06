@@ -5,6 +5,8 @@
  */
 package main;
 
+import dataset.UsersList;
+
 /**
  *
  * @author Usuario
@@ -14,8 +16,9 @@ public class TareaFinal {
     /**
      * @param args the command line arguments
      */
+    public static UsersList listManager = new UsersList ();
     public static void main(String[] args) {
-        // TODO code application logic here
+         
     }
     
 }
