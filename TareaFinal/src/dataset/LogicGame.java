@@ -9,13 +9,14 @@ import View.Game;
 import filemanager.ReaderFiletxt;
 import java.io.IOException;
 import model.CrossWord;
+import model.Word;
 
 /**
  *
  * @author Roibin
  */
 public class LogicGame {
-
+    Word word = new Word();
     int coutChar = 0;
     ReaderFiletxt reader = new ReaderFiletxt();
     Game game;
@@ -37,6 +38,41 @@ public class LogicGame {
                 }
             }
         }
+    }
+    
+    public static int revisar (String [][] matrixGame, String [][] matrixPlayer,Word[] wordList, int arrayIndex, int wordCount, int correctLetter,int row, int column){
+        if(wordList[arrayIndex].getOrientation().equals("H")){
+            if(matrixGame[ row ][ column].equals(matrixPlayer[ row ][ column ])){
+                if(column == wordList[arrayIndex].getLettler().length()-1){
+                    if(wordCount == wordList.length-1){
+                        return wordCount;
+                    }
+                        wordCount +=1;
+                        return revisar(matrixGame, matrixPlayer, wordList, arrayIndex+1, wordCount, correctLetter,wordList[arrayIndex].getRow(),wordList[arrayIndex].getColumn());
+                }else{
+                    correctLetter +=1;
+                    return revisar(matrixGame, matrixPlayer, wordList, arrayIndex, wordCount, correctLetter,wordList[arrayIndex].getRow(),wordList[arrayIndex].getColumn()+1);
+                }
+            }else{
+                return revisar(matrixGame, matrixPlayer, wordList, arrayIndex+1, wordCount, correctLetter,wordList[arrayIndex].getRow(),wordList[arrayIndex].getColumn());
+            }
+        }else{
+            if(matrixGame[ row ][ column].equals(matrixPlayer[ row ][ column ])){
+                if( row == wordList[arrayIndex].getLettler().length()-1){
+                    if(wordCount == wordList.length-1){
+                        return wordCount;
+                    }
+                    wordCount +=1;
+                    return revisar(matrixGame, matrixPlayer, wordList, arrayIndex+1, wordCount, correctLetter,wordList[arrayIndex].getRow(),wordList[arrayIndex].getColumn());
+                }else{
+                    correctLetter +=1;
+                    return revisar(matrixGame, matrixPlayer, wordList, arrayIndex, wordCount, correctLetter,wordList[arrayIndex].getRow()+1,wordList[arrayIndex].getColumn());
+                }
+            }else{
+                return revisar(matrixGame, matrixPlayer, wordList, arrayIndex+1, wordCount, correctLetter,wordList[arrayIndex].getRow(),wordList[arrayIndex].getColumn());
+            }
+        }
+        
     }
 
     public String[][] makeMatrix(CrossWord cross) {
