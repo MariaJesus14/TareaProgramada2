@@ -11,6 +11,7 @@ package model;
  * @author Maria Rodriguez
  * @author Roibin Elizondo
  */
+
 public class CrossWord {
 
     public CrossWord(int rows, int columns, Word[] arrayWord) {

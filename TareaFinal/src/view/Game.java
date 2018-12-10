@@ -11,13 +11,14 @@ package view;
  * @author Maria Rodriguez
  * @author Roibin Elizondo
  */
-public class CrossWord extends javax.swing.JDialog {
+public class Game extends javax.swing.JDialog {
 
     /**
      * Creates new form CrossWord
      */
-    public CrossWord(java.awt.Frame parent, boolean modal) {
+    public Game(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
+        setLocationRelativeTo(parent);
         initComponents();
     }
 

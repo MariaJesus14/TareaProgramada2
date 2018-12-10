@@ -25,7 +25,7 @@ public class ReaderFiletxt {
     int column;
     int row;
 
-    String level1 = "C:\\Prueba\\facil\\1.txt";
+    String level1 = "files/level1/1.txt";
 
     public CrossWord readFileEasy(String root, int lengArray) throws IOException {
         String[][] matrixEasy;
@@ -35,7 +35,7 @@ public class ReaderFiletxt {
         int var =0;
         
          row = Character.getNumericValue(file[0].charAt(0));
-         column = Character.getNumericValue(file[0].charAt(2));
+         column = Character.getNumericValue(file[0].charAt(2)); 
         
         for (int i = 1; i < file.length; i++, var++) {
             words = file[i].split("/");

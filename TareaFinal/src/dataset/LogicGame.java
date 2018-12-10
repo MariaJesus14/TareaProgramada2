@@ -5,7 +5,7 @@
  */
 package dataset;
 
-import View.Game;
+import view.Game;
 import filemanager.ReaderFiletxt;
 import java.io.IOException;
 import model.CrossWord;
