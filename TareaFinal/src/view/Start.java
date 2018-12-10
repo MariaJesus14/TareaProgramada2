@@ -5,6 +5,8 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 
 
 /**
@@ -130,10 +132,11 @@ public class Start extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalirActionPerformed
-     
-
-           
-           dispose ();
+            int option=JOptionPane.showConfirmDialog(null, "Esta seguro de que desea salir?", "Salir", JOptionPane.YES_NO_OPTION);
+          if (option==0) {
+              dispose ();
+        }
+          
         
     }//GEN-LAST:event_btSalirActionPerformed
 
