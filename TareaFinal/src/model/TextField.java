@@ -21,7 +21,6 @@ public class TextField extends JTextField {
    
     private int [][] datos;
     
-
     public void setColorWhite() {
         setBackground(Color.white);
         setEditable(true);

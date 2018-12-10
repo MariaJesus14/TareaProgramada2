@@ -5,6 +5,9 @@
  */
 package view;
 
+import java.util.ArrayList;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Jerry Rivera 
@@ -16,12 +19,15 @@ public class Game extends javax.swing.JDialog {
     /**
      * Creates new form CrossWord
      */
+    ArrayList<Object> textos = new ArrayList<>();
+    int index=0;
     public Game(javax.swing.JDialog parent, boolean modal) {
         super(parent, modal);
         initComponents();
          setLocationRelativeTo(parent);
+   
     }
-
+ 
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -34,81 +40,25 @@ public class Game extends javax.swing.JDialog {
         jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        getContentPane().setLayout(new java.awt.GridLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 729, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 367, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(21, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(88, Short.MAX_VALUE))
-        );
+        jPanel1.setLayout(new java.awt.GridLayout(20, 20));
+        getContentPane().add(jPanel1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private javax.swing.JTextField txt1;
-    private javax.swing.JTextField txt2;
-    private javax.swing.JTextField txt3;
-    private javax.swing.JTextField txt4;
-    private javax.swing.JTextField txt5;
-    private javax.swing.JTextField txt6;
-    private javax.swing.JTextField txt7;
-    private javax.swing.JTextField txt8;
-    private javax.swing.JTextField txt9;
-    private javax.swing.JTextField txt10;
-    private javax.swing.JTextField txt11;
-    private javax.swing.JTextField txt12;
-    private javax.swing.JTextField txt13;
-    private javax.swing.JTextField txt14;
-    private javax.swing.JTextField txt15;
-    private javax.swing.JTextField txt16;
-    private javax.swing.JTextField txt17;
-    private javax.swing.JTextField txt18;
-    private javax.swing.JTextField txt19;
-    private javax.swing.JTextField txt20;
-    private javax.swing.JTextField txt21;
-    private javax.swing.JTextField txt22;
-    private javax.swing.JTextField txt23;
-    private javax.swing.JTextField txt24;
-    private javax.swing.JTextField txt25;
-    private javax.swing.JTextField txt26;
-    private javax.swing.JTextField txt27;
-    private javax.swing.JTextField txt28;
-    private javax.swing.JTextField txt29;
-    private javax.swing.JTextField txt30;
-    private javax.swing.JTextField txt31;
-    private javax.swing.JTextField txt32;
-    private javax.swing.JTextField txt33;
-    private javax.swing.JTextField txt34;
-    private javax.swing.JTextField txt35;
-    private javax.swing.JTextField txt36;
-    private javax.swing.JTextField txt37;
-    private javax.swing.JTextField txt38;
-    private javax.swing.JTextField txt39;
-    private javax.swing.JTextField txt40;
+   public  void initPanel (){
+       JTextField txt = new JTextField();
+       jPanel1.add(txt);
+       textos.add(txt);
+       index++;
+       jPanel1.updateUI();
+   }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
+
+
 }

@@ -1,7 +1,7 @@
 
 package user;
 
-import java.io.Serializable;
+
 
 /**
  *
@@ -10,7 +10,7 @@ import java.io.Serializable;
  * @author Roibin Elizondo
  */
 
-public class User implements Serializable{
+public class User {
     public static String username;
     private String password;
 

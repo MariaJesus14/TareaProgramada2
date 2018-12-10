@@ -13,17 +13,24 @@ package model;
  */
 
 public class CrossWord {
+ /**
+ *CrossWord metodo constructor que inicializa la clase
+ * @param recibe las filas, columnas, y un vector de palabras
+ * @return inicailiza 
+ * 
+ */
 
     public CrossWord(int rows, int columns, Word[] arrayWord) {
         this.rows = rows;
         this.columns = columns;
         this.arrayWord = arrayWord;
     }
-    
-    
-    public CrossWord() {
-        
-    }
+ /**
+ *getRows metodo que obtiene las columnas
+ * @param no recibe parametros
+ * @return las filas  
+ * 
+ */    
 
     public int getRows() {
         return rows;

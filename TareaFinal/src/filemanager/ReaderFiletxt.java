@@ -26,6 +26,13 @@ public class ReaderFiletxt {
     int row;
 
     String level1 = "files/level1/1.txt";
+    
+ /**
+ *readFileEasy inicia el juego segun la dificultad escogida por el usuario
+ * @param recibe un numero entero por parametros
+ * @return es void por lo tanto  no retorna 
+ * 
+ */
 
     public CrossWord readFileEasy(String root, int lengArray) throws IOException {
         String[][] matrixEasy;
@@ -44,7 +51,8 @@ public class ReaderFiletxt {
         CrossWord cross = new CrossWord(row, column, listWord);
         return cross;
     }
-
+    
+ 
     public String[] loadFile(String rootFile, int lengArray) throws FileNotFoundException, IOException {
         String cadena;
         int contador = 0;

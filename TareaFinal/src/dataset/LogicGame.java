@@ -22,16 +22,23 @@ public class LogicGame {
     int coutChar = 0;
     ReaderFiletxt reader = new ReaderFiletxt();
     Game game;
+    
+ /**
+ *LGame inicia el juego segun la dificultad escogida por el usuario
+ * @param recibe un numero entero por parametros
+ * @return es void por lo tanto  no retorna 
+ * 
+ */
 
     public void LGame(int level) throws IOException {
         if (level == 1) {
             CrossWord cross = reader.readFileEasy("files/level1/1.txt", 6);
             String[][] matrixGame = makeMatrix(cross);
-            game = new Game(matrixGame);
+            
             game.setVisible(true);
         } else {
             if (level == 2) {
-//                reader.readFile("C:\\Prueba\\facil\\1.txt", 8);
+                reader.readFileEasy("C:\\Prueba\\facil\\1.txt", 8);
             } else {
                 if (level == 3) {
 //                    reader.readFile("C:\\Prueba\\facil\\1.txt", 10);
@@ -42,7 +49,14 @@ public class LogicGame {
         }
     }
     
-    public static int revisar (String [][] matrixGame, String [][] matrixPlayer,Word[] wordList, int arrayIndex, int wordCount, int correctLetter,int row, int column){
+ /**
+ * review metodo que revisa o compara si las letras del crucugrama son iguales a las palabras asignadas, es un metodo recursivo
+ * @param recibe la matrizGame, matrixPlayer, WordList, arrayndex, wordCount, correctLetter,row y column
+ * @return la operacion recursiva
+ * 
+ */
+    
+    public static int review (String [][] matrixGame, String [][] matrixPlayer,Word[] wordList, int arrayIndex, int wordCount, int correctLetter,int row, int column){
         if(wordList[arrayIndex].getOrientation().equals("H")){
             if(matrixGame[ row ][ column].equals(matrixPlayer[ row ][ column ])){
                 if(column == wordList[arrayIndex].getLettler().length()-1){
@@ -50,13 +64,13 @@ public class LogicGame {
                         return wordCount;
                     }
                         wordCount +=1;
-                        return revisar(matrixGame, matrixPlayer, wordList, arrayIndex+1, wordCount, correctLetter,wordList[arrayIndex].getRow(),wordList[arrayIndex].getColumn());
+                        return review(matrixGame, matrixPlayer, wordList, arrayIndex+1, wordCount, correctLetter,wordList[arrayIndex].getRow(),wordList[arrayIndex].getColumn());
                 }else{
                     correctLetter +=1;
-                    return revisar(matrixGame, matrixPlayer, wordList, arrayIndex, wordCount, correctLetter,wordList[arrayIndex].getRow(),wordList[arrayIndex].getColumn()+1);
+                    return review(matrixGame, matrixPlayer, wordList, arrayIndex, wordCount, correctLetter,wordList[arrayIndex].getRow(),wordList[arrayIndex].getColumn()+1);
                 }
             }else{
-                return revisar(matrixGame, matrixPlayer, wordList, arrayIndex+1, wordCount, correctLetter,wordList[arrayIndex].getRow(),wordList[arrayIndex].getColumn());
+                return review(matrixGame, matrixPlayer, wordList, arrayIndex+1, wordCount, correctLetter,wordList[arrayIndex].getRow(),wordList[arrayIndex].getColumn());
             }
         }else{
             if(matrixGame[ row ][ column].equals(matrixPlayer[ row ][ column ])){
@@ -65,13 +79,13 @@ public class LogicGame {
                         return wordCount;
                     }
                     wordCount +=1;
-                    return revisar(matrixGame, matrixPlayer, wordList, arrayIndex+1, wordCount, correctLetter,wordList[arrayIndex].getRow(),wordList[arrayIndex].getColumn());
+                    return review(matrixGame, matrixPlayer, wordList, arrayIndex+1, wordCount, correctLetter,wordList[arrayIndex].getRow(),wordList[arrayIndex].getColumn());
                 }else{
                     correctLetter +=1;
-                    return revisar(matrixGame, matrixPlayer, wordList, arrayIndex, wordCount, correctLetter,wordList[arrayIndex].getRow()+1,wordList[arrayIndex].getColumn());
+                    return review(matrixGame, matrixPlayer, wordList, arrayIndex, wordCount, correctLetter,wordList[arrayIndex].getRow()+1,wordList[arrayIndex].getColumn());
                 }
             }else{
-                return revisar(matrixGame, matrixPlayer, wordList, arrayIndex+1, wordCount, correctLetter,wordList[arrayIndex].getRow(),wordList[arrayIndex].getColumn());
+                return review(matrixGame, matrixPlayer, wordList, arrayIndex+1, wordCount, correctLetter,wordList[arrayIndex].getRow(),wordList[arrayIndex].getColumn());
             }
         }
         

@@ -21,25 +21,43 @@ public class ReaderManager {
 
     private BufferedReader reader;
 
+ /**
+ *open se encarga de abrir el archivo de texto
+ * @param recibe un string por parametros
+ * @return es void por lo tanto  no retorna 
+ * 
+ */
     public void open(String fileName) throws FileNotFoundException {
         reader = new BufferedReader(new FileReader(fileName));
     }
+ /**
+ *read se encarga de abrir el archivo de texto
+ * @param no recibe parametros
+ * @return retorna el usuario 
+ * 
+ */
 
     public User read() throws IOException {
-        User usuario = null;
+        User user = null;
         String line = reader.readLine();
         String[] data;
 
         
         if (line != null) {
-            usuario = new User();
+            user = new User();
             data = line.split("-");
-            usuario.setUsername(data[0]); 
-            usuario.setPassword(data[1]); 
+            user.setUsername(data[0]); 
+            user.setPassword(data[1]); 
             
         }
-        return usuario;
+        return user;
     }
+ /**
+ *close se encarga de cerrar el archivo de texto
+ * @param no recibe parametros
+ * @return es void por lo tanto no retorna
+ * 
+ */
 
     public void close() throws IOException {
         reader.close();
