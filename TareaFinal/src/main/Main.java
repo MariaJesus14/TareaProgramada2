@@ -10,9 +10,11 @@ import view.Start;
 
 /**
  *
- * @author Usuario
+ * @author Jerry Rivera 
+ * @author Maria Rodriguez
+ * @author Roibin Elizondo
  */
-public class TareaFinal {
+public class Main {
 
     /**
      * @param args the command line arguments

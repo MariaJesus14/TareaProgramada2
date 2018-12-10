@@ -3,7 +3,13 @@ package filemanager;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
-import main.TareaFinal;
+import main.Main;
+/**
+ *
+ * @author Jerry Rivera 
+ * @author Maria Rodriguez
+ * @author Roibin Elizondo
+ */
 
 public class WriterManagerbin {
 
@@ -14,7 +20,7 @@ public class WriterManagerbin {
     }
 
     public void write() throws IOException {
-        writer.writeObject(TareaFinal.listManager);
+        writer.writeObject(Main.listManager);
     }
 
     public void close() throws IOException {

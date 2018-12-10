@@ -7,7 +7,9 @@ package view;
 
 /**
  *
- * @author Usuario
+ * @author Jerry Rivera 
+ * @author Maria Rodriguez
+ * @author Roibin Elizondo
  */
 public class Instructions extends javax.swing.JDialog {
 

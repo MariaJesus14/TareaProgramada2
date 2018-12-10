@@ -7,7 +7,9 @@ package view;
 
 /**
  *
- * @author Usuario
+ * @author Jerry Rivera 
+ * @author Maria Rodriguez
+ * @author Roibin Elizondo
  */
 public class CrossWord extends javax.swing.JDialog {
 
@@ -31,6 +33,8 @@ public class CrossWord extends javax.swing.JDialog {
         jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

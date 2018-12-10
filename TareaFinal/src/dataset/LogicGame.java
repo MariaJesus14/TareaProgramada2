@@ -13,7 +13,9 @@ import model.Word;
 
 /**
  *
- * @author Roibin
+ * @author Jerry Rivera 
+ * @author Maria Rodriguez
+ * @author Roibin Elizondo
  */
 public class LogicGame {
     Word word = new Word();

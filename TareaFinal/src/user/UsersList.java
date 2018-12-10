@@ -1,14 +1,16 @@
 
 package user;
 
+
 import java.io.Serializable;
 import java.util.ArrayList;
-import user.User;
 import static user.User.username;
 
 /**
  *
- * @author Usuario
+ * @author Jerry Rivera 
+ * @author Maria Rodriguez
+ * @author Roibin Elizondo
  */
 public class UsersList implements Serializable{
     private ArrayList <User> vecUser;
@@ -55,14 +57,6 @@ public class UsersList implements Serializable{
         }
         return -1;
     }   
-
-//    public String getListString() {
-//        String text = "";
-//        for (int i = 0; i < count; i++) {
-//            text += vecUser[i] + "\n";
-//        }
-//        return text;
-//    }
     
     
 }

@@ -4,6 +4,12 @@ import user.UsersList;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+/**
+ *
+ * @author Jerry Rivera 
+ * @author Maria Rodriguez
+ * @author Roibin Elizondo
+ */
 
 public class ReaderManagerbin {
 

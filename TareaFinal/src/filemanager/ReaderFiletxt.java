@@ -17,7 +17,9 @@ import model.Word;
 
 /**
  *
- * @author Roibin
+ * @author Jerry Rivera 
+ * @author Maria Rodriguez
+ * @author Roibin Elizondo
  */
 public class ReaderFiletxt {
     int column;

@@ -6,24 +6,17 @@
 package view;
 
 import filemanager.ReaderManagerbin;
-import filemanager.WriterManagerbin;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import static java.lang.System.out;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import static main.TareaFinal.listManager;
+import static main.Main.listManager;
 import user.User;
 import user.UsersList;
 
 /**
  *
- * @author Usuario
+ * @author Jerry Rivera 
+ * @author Maria Rodriguez
+ * @author Roibin Elizondo
  */
 public class Ingreso extends javax.swing.JDialog {
 

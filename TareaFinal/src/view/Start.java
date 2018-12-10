@@ -11,9 +11,10 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Usuario
+ * @author Jerry Rivera 
+ * @author Maria Rodriguez
+ * @author Roibin Elizondo
  */
-
 public class Start extends javax.swing.JFrame {
     Ingreso ingre = new Ingreso (this,true);
     /**
@@ -142,13 +143,7 @@ public class Start extends javax.swing.JFrame {
             System.err.println(ex.getMessage());
             
         }
-//           int option= JOptionPane.showConfirmDialog(null, "¿Esta seguro de que desea salir?","",JOptionPane.YES_NO_OPTION);
-//           if (option==1) {
-//           
-//        }else{
-//               
-//           }
-         // ingre.read();
+
            
            dispose ();
         

@@ -12,7 +12,9 @@ import javax.swing.JTextField;
 
 /**
  *
+ * @author Jerry Rivera 
  * @author Maria Rodriguez
+ * @author Roibin Elizondo
  */
 public class TextField extends JTextField {
     ReaderFiletxt reader = new ReaderFiletxt();

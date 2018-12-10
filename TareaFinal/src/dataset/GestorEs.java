@@ -3,13 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package View;
+package dataset;
 
 import javax.swing.JOptionPane;
 
 /**
  *
- * @author usuario
+ * @author Jerry Rivera 
+ * @author Maria Rodriguez
+ * @author Roibin Elizondo
  */
 public class GestorEs {
    public static void mostrarMensaje (String mensaje){

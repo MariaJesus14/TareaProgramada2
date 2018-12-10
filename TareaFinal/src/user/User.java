@@ -5,7 +5,9 @@ import java.io.Serializable;
 
 /**
  *
- * @author Usuario
+ * @author Jerry Rivera 
+ * @author Maria Rodriguez
+ * @author Roibin Elizondo
  */
 public class User implements Serializable{
     public static String username;
