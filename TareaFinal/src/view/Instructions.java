@@ -14,7 +14,7 @@ public class Instructions extends javax.swing.JDialog {
     /**
      * Creates new form Game
      */
-    public Instructions(java.awt.Frame parent, boolean modal) {
+    public Instructions(javax.swing.JDialog parent, boolean modal) {
         super(parent, modal);
         initComponents();
         setLocationRelativeTo(parent);
@@ -106,6 +106,8 @@ public class Instructions extends javax.swing.JDialog {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
          dispose();
+         Levels level = new Levels(this, true);
+        level.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

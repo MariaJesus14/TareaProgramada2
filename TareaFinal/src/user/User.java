@@ -8,7 +8,7 @@ import java.io.Serializable;
  * @author Usuario
  */
 public class User implements Serializable{
-    private String username;
+    public static String username;
     private String password;
 
     public User() {
@@ -35,6 +35,9 @@ public class User implements Serializable{
     public void setPassword(String password) {
         this.password = password;
     }
-    
+    public String toFileString() {
+        return username + "-" + password;
+
+    }
     
 }

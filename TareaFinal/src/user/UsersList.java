@@ -2,32 +2,28 @@
 package user;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import user.User;
+import static user.User.username;
 
 /**
  *
  * @author Usuario
  */
 public class UsersList implements Serializable{
-    private User [] vecUser;
+    private ArrayList <User> vecUser;
     private int count;
 
     public UsersList() {
-        vecUser= new User [100];
+        vecUser= new ArrayList<>();
     }
 
-    public UsersList(User[] vecUser, int count) {
-        this.vecUser = vecUser;
-        this.count = count;
+
+    public User getVecUser(int i) {
+        return vecUser.get(i);
     }
 
-    public User[] getVecUser() {
-        return vecUser;
-    }
-
-    public void setVecUser(User[] vecUser) {
-        this.vecUser = vecUser;
-    }
+    
 
     public int getCount() {
         return count;
@@ -41,20 +37,32 @@ public class UsersList implements Serializable{
     }
 
     public User getUser(int index) {
-        return vecUser[index];
+        return vecUser.get(index);
     }
 
     public void addUser(User user) {
-        vecUser[count++] = user;
+        vecUser.add(user);
     }
-
-    public String getListString() {
-        String text = "";
-        for (int i = 0; i < count; i++) {
-            text += vecUser[i] + "\n";
+    public int getNumber (){
+        return vecUser.size();
+    }
+    public int look (String index){
+       int n = this.getNumber();
+        for (int i = 0; i < n; i++) {
+            if (username.equalsIgnoreCase (this.getUser(i).getUsername())) {
+               return i; 
+            }
         }
-        return text;
-    }
+        return -1;
+    }   
+
+//    public String getListString() {
+//        String text = "";
+//        for (int i = 0; i < count; i++) {
+//            text += vecUser[i] + "\n";
+//        }
+//        return text;
+//    }
     
     
 }

@@ -7,18 +7,30 @@ package view;
 
 import filemanager.ReaderManagerbin;
 import filemanager.WriterManagerbin;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import static java.lang.System.out;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import static main.TareaFinal.listManager;
 import user.User;
+import user.UsersList;
 
 /**
  *
  * @author Usuario
  */
 public class Ingreso extends javax.swing.JDialog {
-   private String [] users;
-   private int counter;
+
+    UsersList ul;
+    User user;
+    private int counter;
+
     /**
      * Creates new form Ingreso
      */
@@ -155,45 +167,51 @@ public class Ingreso extends javax.swing.JDialog {
     }//GEN-LAST:event_pfContraseñaActionPerformed
 
     private void btinscribirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btinscribirMouseClicked
-       String user= new String(tfUsuario.getText());
-       String pass= new String (pfContraseña.getPassword());
-        if (user.length()<4 || pass.length()<3) {
-            JOptionPane.showMessageDialog(null, "Invalido "+"\n"+" Por favor ingrese un USUARIO de al menos 4 caracteres y una CONTRASEÑA de al menos 3 caracteres ");
-        }
+
+
     }//GEN-LAST:event_btinscribirMouseClicked
 
     private void btinscribirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btinscribirActionPerformed
-         ReaderManagerbin reader = new ReaderManagerbin();
-         WriterManagerbin writer = new WriterManagerbin();
+        
+        String u = tfUsuario.getText();
+        String p = pfContraseña.getText();
+        
+        
+        if (u.length() < 4 || p.length() < 3) {
+            JOptionPane.showMessageDialog(null, "Invalido " + "\n" + " Por favor ingrese un USUARIO de al menos 4 caracteres y una CONTRASEÑA de al menos 3 caracteres ");
+        }else {
+           ReaderManagerbin reader = new ReaderManagerbin();
         try {
-//            if () {
-//                
-//            }
+//         
             reader.open("userFile.ser");
             listManager = reader.read();
-            reader.close(); 
-            
+            reader.close();
+
             System.out.println("Lectura exitosa");
         } catch (IOException ex) {
             System.err.println("error de archivo");
             System.err.println(ex.getMessage());
-           
+
         } catch (ClassNotFoundException ex) {
             System.err.println("error de archivo");
             System.err.println(ex.getMessage());
-           
+
         }
-        int size = listManager.getSize();
-        for (int i = size; i < size + 5; i++) {
-            listManager.addUser(new User (" " + i, " "+ i));
+             dispose();
+            Instructions inst = new Instructions(this, true);
+              inst.setVisible(true);
             
         }
+
        
-        dispose();
+     
+
+
+
     }//GEN-LAST:event_btinscribirActionPerformed
 
     private void tfUsuarioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfUsuarioKeyTyped
-               
+
     }//GEN-LAST:event_tfUsuarioKeyTyped
 
     private void pfContraseñaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pfContraseñaKeyTyped
@@ -205,7 +223,6 @@ public class Ingreso extends javax.swing.JDialog {
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btinscribir;
     private javax.swing.JButton jButton1;
@@ -214,4 +231,5 @@ public class Ingreso extends javax.swing.JDialog {
     private javax.swing.JPasswordField pfContraseña;
     private javax.swing.JTextField tfUsuario;
     // End of variables declaration//GEN-END:variables
+
 }

@@ -13,8 +13,9 @@ import javax.swing.JOptionPane;
  *
  * @author Usuario
  */
-public class Start extends javax.swing.JFrame {
 
+public class Start extends javax.swing.JFrame {
+    Ingreso ingre = new Ingreso (this,true);
     /**
      * Creates new form Start
      */
@@ -37,10 +38,8 @@ public class Start extends javax.swing.JFrame {
         lbMaria = new javax.swing.JLabel();
         lbRoibin = new javax.swing.JLabel();
         btIngresar = new javax.swing.JButton();
-        btIncribir = new javax.swing.JButton();
         btSalir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(102, 102, 102));
@@ -70,15 +69,6 @@ public class Start extends javax.swing.JFrame {
             }
         });
 
-        btIncribir.setFont(new java.awt.Font("DejaVu Math TeX Gyre", 1, 18)); // NOI18N
-        btIncribir.setForeground(new java.awt.Color(0, 0, 0));
-        btIncribir.setText("Inscribir");
-        btIncribir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btIncribirActionPerformed(evt);
-            }
-        });
-
         btSalir.setFont(new java.awt.Font("DejaVu Math TeX Gyre", 1, 18)); // NOI18N
         btSalir.setForeground(new java.awt.Color(0, 0, 0));
         btSalir.setText("Salir");
@@ -92,45 +82,30 @@ public class Start extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("<CRUCIGRAMA>");
 
-        jButton1.setFont(new java.awt.Font("DejaVu Math TeX Gyre", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
-        jButton1.setText("Instrucciones");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(btIncribir)
-                .addGap(39, 39, 39)
-                .addComponent(jButton1)
-                .addGap(30, 30, 30)
-                .addComponent(btIngresar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
-                .addComponent(btSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lbWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(132, 132, 132)
+                            .addComponent(btSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(157, 157, 157)
+                            .addComponent(btIngresar))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(201, 201, 201)
+                            .addComponent(jLabel1))))
+                .addGap(60, 96, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(231, 231, 231))
-            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(189, 189, 189)
-                        .addComponent(lbWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(292, 292, 292)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbMaria)
-                            .addComponent(lbJerry)
-                            .addComponent(lbRoibin))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lbRoibin)
+                    .addComponent(lbMaria)
+                    .addComponent(lbJerry))
+                .addGap(233, 233, 233))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -147,20 +122,13 @@ public class Start extends javax.swing.JFrame {
                 .addComponent(lbRoibin)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btIncribir)
                     .addComponent(btIngresar)
-                    .addComponent(jButton1)
                     .addComponent(btSalir))
                 .addGap(48, 48, 48))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btIncribirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btIncribirActionPerformed
-       Ingreso ingre = new Ingreso(this, true);
-       ingre.setVisible(true);
-    }//GEN-LAST:event_btIncribirActionPerformed
 
     private void btSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalirActionPerformed
         WriterManagerbin writer = new WriterManagerbin();
@@ -174,34 +142,30 @@ public class Start extends javax.swing.JFrame {
             System.err.println(ex.getMessage());
             
         }
-           int option= JOptionPane.showConfirmDialog(null, "¿Esta seguro de que desea salir?","",JOptionPane.YES_NO_OPTION);
-           if (option==1) {
+//           int option= JOptionPane.showConfirmDialog(null, "¿Esta seguro de que desea salir?","",JOptionPane.YES_NO_OPTION);
+//           if (option==1) {
+//           
+//        }else{
+//               
+//           }
+         // ingre.read();
            
-        }else{
-                dispose ();
-           }
-           
-          
+           dispose ();
         
     }//GEN-LAST:event_btSalirActionPerformed
 
     private void btIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btIngresarActionPerformed
-        Levels level = new Levels(this, true);
-        level.setVisible(true);
+       Ingreso ingre = new Ingreso(this, true);
+       ingre.setVisible(true);
+        
+        
     }//GEN-LAST:event_btIngresarActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Instructions inst = new Instructions(this, true);
-        inst.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
 
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btIncribir;
     private javax.swing.JButton btIngresar;
     private javax.swing.JButton btSalir;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lbJerry;
     private javax.swing.JLabel lbMaria;

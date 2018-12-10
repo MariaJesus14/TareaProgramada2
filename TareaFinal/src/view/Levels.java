@@ -14,7 +14,7 @@ public class Levels extends javax.swing.JDialog {
     /**
      * Creates new form Levels
      */
-    public Levels(java.awt.Frame parent, boolean modal) {
+    public Levels(javax.swing.JDialog parent, boolean modal) {
         super(parent, modal);
         initComponents();
          setLocationRelativeTo(parent);
