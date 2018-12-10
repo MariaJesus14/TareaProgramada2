@@ -5,7 +5,7 @@
  */
 package main;
 
-import user.UsersList;
+
 import view.Start;
 
 /**
@@ -19,7 +19,7 @@ public class Main {
     /**
      * @param args the command line arguments
      */
-    public static UsersList listManager = new UsersList ();
+ 
     public static void main(String[] args) {
          Start star = new Start ();
          star.setVisible(true);

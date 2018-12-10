@@ -114,6 +114,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Facil"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btEasyActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btMedium">
       <Properties>
@@ -125,6 +128,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Medio"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btMediumActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="Dificil">
       <Properties>
@@ -136,6 +142,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Dificil"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DificilActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btmuyDificil">
       <Properties>
@@ -147,6 +156,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Muy Dificil"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btmuyDificilActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

@@ -60,7 +60,7 @@ public class Instructions extends javax.swing.JDialog {
 
         jLabel3.setFont(new java.awt.Font("DejaVu Math TeX Gyre", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("una letra en cada casilla correspondiente, solo podra ingresar letras  ");
+        jLabel3.setText("una letra en la casilla correspondiente, solo podra ingresar letras  ");
 
         jLabel4.setFont(new java.awt.Font("DejaVu Math TeX Gyre", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));

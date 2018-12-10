@@ -10,7 +10,13 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class UserWriterManager {
+/**
+ *
+ * @author Jerry Rivera 
+ * @author Maria Rodriguez
+ * @author Roibin Elizondo
+ */
+public class WriterManager {
 
     private BufferedWriter writer;
 

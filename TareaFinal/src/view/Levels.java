@@ -21,6 +21,7 @@ public class Levels extends javax.swing.JDialog {
         initComponents();
          setLocationRelativeTo(parent);
     }
+     Game game = new Game(this, true);
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -56,18 +57,38 @@ public class Levels extends javax.swing.JDialog {
         btEasy.setFont(new java.awt.Font("DejaVu Math TeX Gyre", 1, 18)); // NOI18N
         btEasy.setForeground(new java.awt.Color(0, 0, 0));
         btEasy.setText("Facil");
+        btEasy.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btEasyActionPerformed(evt);
+            }
+        });
 
         btMedium.setFont(new java.awt.Font("DejaVu Math TeX Gyre", 1, 18)); // NOI18N
         btMedium.setForeground(new java.awt.Color(0, 0, 0));
         btMedium.setText("Medio");
+        btMedium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btMediumActionPerformed(evt);
+            }
+        });
 
         Dificil.setFont(new java.awt.Font("DejaVu Math TeX Gyre", 1, 18)); // NOI18N
         Dificil.setForeground(new java.awt.Color(0, 0, 0));
         Dificil.setText("Dificil");
+        Dificil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DificilActionPerformed(evt);
+            }
+        });
 
         btmuyDificil.setFont(new java.awt.Font("DejaVu Math TeX Gyre", 1, 18)); // NOI18N
         btmuyDificil.setForeground(new java.awt.Color(0, 0, 0));
         btmuyDificil.setText("Muy Dificil");
+        btmuyDificil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btmuyDificilActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -120,6 +141,22 @@ public class Levels extends javax.swing.JDialog {
     private void btbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btbackActionPerformed
         dispose();
     }//GEN-LAST:event_btbackActionPerformed
+
+    private void btEasyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEasyActionPerformed
+        game.setVisible(true);
+    }//GEN-LAST:event_btEasyActionPerformed
+
+    private void btMediumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btMediumActionPerformed
+        game.setVisible(true);
+    }//GEN-LAST:event_btMediumActionPerformed
+
+    private void DificilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DificilActionPerformed
+        game.setVisible(true);
+    }//GEN-LAST:event_DificilActionPerformed
+
+    private void btmuyDificilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmuyDificilActionPerformed
+        game.setVisible(true);
+    }//GEN-LAST:event_btmuyDificilActionPerformed
 
 
 

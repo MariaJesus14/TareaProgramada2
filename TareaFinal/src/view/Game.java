@@ -16,10 +16,10 @@ public class Game extends javax.swing.JDialog {
     /**
      * Creates new form CrossWord
      */
-    public Game(java.awt.Frame parent, boolean modal) {
+    public Game(javax.swing.JDialog parent, boolean modal) {
         super(parent, modal);
-        setLocationRelativeTo(parent);
         initComponents();
+         setLocationRelativeTo(parent);
     }
 
     /**

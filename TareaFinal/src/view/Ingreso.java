@@ -5,15 +5,13 @@
  */
 package view;
 
-import filemanager.ReaderManagerbin;
-import filemanager.UserWriterManager;
-import filemanager.WriterManagerbin;
+
+import filemanager.WriterManager;
 import java.io.IOException;
 import javax.swing.JOptionPane;
-import static main.Main.listManager;
 import user.User;
-import user.UserValidator;
-import user.UsersList;
+import user.Validator;
+
 
 /**
  *
@@ -23,7 +21,7 @@ import user.UsersList;
  */
 public class Ingreso extends javax.swing.JDialog {
 
-    UsersList ul;
+  
     User user;
     private int counter;
 
@@ -176,14 +174,14 @@ public class Ingreso extends javax.swing.JDialog {
         if (u.length() < 4 || p.length() < 3) {
             JOptionPane.showMessageDialog(null, "Invalido " + "\n" + " Por favor ingrese un USUARIO de al menos 4 caracteres y una CONTRASEÑA de al menos 3 caracteres ");
         } else {
-              if (UserValidator.toCheckUser(tfUsuario.getText())) {
+              if (Validator.toCheck(tfUsuario.getText(), pfContraseña.getText())) {
                     JOptionPane.showMessageDialog(null, "Bienvenido de nuevo");
                     dispose();
                     inst.setVisible(true);
 
                 } else {
                     User toRegisterUser = new User(tfUsuario.getText(), pfContraseña.getText());
-                    UserWriterManager writer = new UserWriterManager();
+                    WriterManager writer = new WriterManager();
                     try {
                         writer.open("userFile.txt");
                         writer.write(toRegisterUser);

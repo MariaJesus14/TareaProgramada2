@@ -7,7 +7,9 @@ package filemanager;
 
 /**
  *
- * @author Hansy Gonzalez
+ * @author Jerry Rivera 
+ * @author Maria Rodriguez
+ * @author Roibin Elizondo
  */
 import user.User;
 import java.io.BufferedReader;
@@ -15,7 +17,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class UserReaderManager {
+public class ReaderManager {
 
     private BufferedReader reader;
 
@@ -25,15 +27,15 @@ public class UserReaderManager {
 
     public User read() throws IOException {
         User usuario = null;
-        String line = reader.readLine(); //retorna null cuando no hay más registros
-        String datos[];
+        String line = reader.readLine();
+        String[] data;
 
         
         if (line != null) {
             usuario = new User();
-            datos = line.split("-");
-            usuario.setUsername(datos[0]); // lee el nombre de usuario
-            usuario.setPassword(datos[1]); // lee la contraseña
+            data = line.split("-");
+            usuario.setUsername(data[0]); 
+            usuario.setPassword(data[1]); 
             
         }
         return usuario;
