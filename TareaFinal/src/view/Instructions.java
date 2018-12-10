@@ -45,7 +45,9 @@ public class Instructions extends javax.swing.JDialog {
 
         jButton1.setFont(new java.awt.Font("DejaVu Math TeX Gyre", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 0, 0));
-        jButton1.setText("Regresar");
+        jButton1.setText("Continuar");
+        jButton1.setToolTipText("");
+        jButton1.setActionCommand("Continuar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);

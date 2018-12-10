@@ -5,9 +5,7 @@
  */
 package view;
 
-import filemanager.WriterManagerbin;
-import java.io.IOException;
-import javax.swing.JOptionPane;
+
 
 /**
  *
@@ -132,17 +130,7 @@ public class Start extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalirActionPerformed
-        WriterManagerbin writer = new WriterManagerbin();
-        try {
-            writer.open("userFile.ser"); 
-            writer.write();
-            writer.close(); 
-            System.out.println("Escritura exitosa");
-        } catch (IOException ex) {
-            System.err.println("error de archivo");
-            System.err.println(ex.getMessage());
-            
-        }
+     
 
            
            dispose ();

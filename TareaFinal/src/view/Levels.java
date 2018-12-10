@@ -32,7 +32,6 @@ public class Levels extends javax.swing.JDialog {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        btplay = new javax.swing.JButton();
         btback = new javax.swing.JButton();
         btEasy = new javax.swing.JButton();
         btMedium = new javax.swing.JButton();
@@ -44,10 +43,6 @@ public class Levels extends javax.swing.JDialog {
         jLabel1.setFont(new java.awt.Font("DejaVu Math TeX Gyre", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Seleccione el Nivel de Dificultad");
-
-        btplay.setFont(new java.awt.Font("DejaVu Math TeX Gyre", 1, 18)); // NOI18N
-        btplay.setForeground(new java.awt.Color(0, 0, 0));
-        btplay.setText("Jugar");
 
         btback.setFont(new java.awt.Font("DejaVu Math TeX Gyre", 1, 18)); // NOI18N
         btback.setForeground(new java.awt.Color(0, 0, 0));
@@ -79,37 +74,34 @@ public class Levels extends javax.swing.JDialog {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(59, 59, 59)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(71, 71, 71))
+                .addGap(185, 185, 185)
+                .addComponent(btback)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
+                .addGap(91, 91, 91)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(91, 91, 91)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 347, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btEasy)
-                            .addComponent(Dificil)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(btback)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 120, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btMedium)
-                        .addGap(110, 110, 110))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btplay)
-                        .addGap(42, 42, 42))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btmuyDificil)
-                        .addGap(80, 80, 80))))
+                            .addComponent(Dificil))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 120, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(btMedium)
+                                .addGap(110, 110, 110))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(btmuyDificil)
+                                .addGap(80, 80, 80))))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(38, 38, 38)
+                .addGap(33, 33, 33)
                 .addComponent(jLabel1)
-                .addGap(62, 62, 62)
+                .addGap(67, 67, 67)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btEasy)
                     .addComponent(btMedium))
@@ -117,11 +109,9 @@ public class Levels extends javax.swing.JDialog {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Dificil)
                     .addComponent(btmuyDificil))
-                .addGap(81, 81, 81)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btback)
-                    .addComponent(btplay))
-                .addGap(26, 26, 26))
+                .addGap(71, 71, 71)
+                .addComponent(btback)
+                .addGap(36, 36, 36))
         );
 
         pack();
@@ -139,7 +129,6 @@ public class Levels extends javax.swing.JDialog {
     private javax.swing.JButton btMedium;
     private javax.swing.JButton btback;
     private javax.swing.JButton btmuyDificil;
-    private javax.swing.JButton btplay;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

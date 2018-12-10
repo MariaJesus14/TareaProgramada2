@@ -6,15 +6,18 @@
 package view;
 
 import filemanager.ReaderManagerbin;
+import filemanager.UserWriterManager;
+import filemanager.WriterManagerbin;
 import java.io.IOException;
 import javax.swing.JOptionPane;
 import static main.Main.listManager;
 import user.User;
+import user.UserValidator;
 import user.UsersList;
 
 /**
  *
- * @author Jerry Rivera 
+ * @author Jerry Rivera
  * @author Maria Rodriguez
  * @author Roibin Elizondo
  */
@@ -165,40 +168,40 @@ public class Ingreso extends javax.swing.JDialog {
     }//GEN-LAST:event_btinscribirMouseClicked
 
     private void btinscribirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btinscribirActionPerformed
-        
+
         String u = tfUsuario.getText();
         String p = pfContraseña.getText();
-        
-        
+        Instructions inst = new Instructions(this, true);
+
         if (u.length() < 4 || p.length() < 3) {
             JOptionPane.showMessageDialog(null, "Invalido " + "\n" + " Por favor ingrese un USUARIO de al menos 4 caracteres y una CONTRASEÑA de al menos 3 caracteres ");
-        }else {
-           ReaderManagerbin reader = new ReaderManagerbin();
-        try {
-//         
-            reader.open("userFile.ser");
-            listManager = reader.read();
-            reader.close();
+        } else {
+              if (UserValidator.toCheckUser(tfUsuario.getText())) {
+                    JOptionPane.showMessageDialog(null, "Bienvenido de nuevo");
+                    dispose();
+                    inst.setVisible(true);
 
-            System.out.println("Lectura exitosa");
-        } catch (IOException ex) {
-            System.err.println("error de archivo");
-            System.err.println(ex.getMessage());
+                } else {
+                    User toRegisterUser = new User(tfUsuario.getText(), pfContraseña.getText());
+                    UserWriterManager writer = new UserWriterManager();
+                    try {
+                        writer.open("userFile.txt");
+                        writer.write(toRegisterUser);
+                        writer.close();
+                        dispose();
+                    } catch (IOException ex) {
+                        System.err.println("error de archivo");
 
-        } catch (ClassNotFoundException ex) {
-            System.err.println("error de archivo");
-            System.err.println(ex.getMessage());
-
-        }
-             dispose();
-            Instructions inst = new Instructions(this, true);
-              inst.setVisible(true);
+                        ex.printStackTrace();
+                    }
+                JOptionPane.showMessageDialog(inst, "Bienvenido");
+            }
+           
+            dispose();
             
+            inst.setVisible(true);
+
         }
-
-       
-     
-
 
 
     }//GEN-LAST:event_btinscribirActionPerformed
